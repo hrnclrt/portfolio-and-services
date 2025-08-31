@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahren Oclarit — Portfolio & Services</title>
+  <meta name="description" content="Portfolio and services website for Ahren Oclarit: web design, landing pages, copy, and brand assets." />
+  <meta property="og:title" content="Ahren Oclarit — Portfolio & Services" />
+  <meta property="og:description" content="Web design, landing pages, and content services." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Simple fade/slide reveal */
+    .reveal { opacity: 0; transform: translateY(16px); transition: all 700ms ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    /* Glassy card */
+    .glass { background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.5)); backdrop-filter: blur(8px); }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#top" class="flex items-center gap-2 font-semibold text-slate-900">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-sky-500 text-white">AO</span>
+          <span>Ahren Oclarit</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#services" class="hover:text-sky-600">Services</a>
+          <a href="#work" class="hover:text-sky-600">Work</a>
+          <a href="#about" class="hover:text-sky-600">About</a>
+          <a href="#testimonials" class="hover:text-sky-600">Testimonials</a>
+          <a href="#contact" class="hover:text-sky-600">Contact</a>
+        </nav>
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-sky-600 px-4 py-2 text-white shadow hover:bg-sky-700">
+          <span>Get a Quote</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-50 via-white to-white"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 md:pt-24 md:pb-28">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <p class="text-xs uppercase tracking-widest text-sky-600 mb-3">Portfolio & Services</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">Designs that convert. <span class="text-sky-600">Websites</span>, landing pages, and content that move people to action.</h1>
+          <p class="mt-5 text-slate-600 text-lg">I help small businesses and creators launch clean, fast, and persuasive pages—without the fluff.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#work" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-white shadow hover:bg-slate-800">See Work</a>
+            <a href="#services" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-slate-900 border border-slate-300 hover:bg-slate-50">What I Do</a>
+          </div>
+          <div class="mt-8 flex items-center gap-6 text-sm text-slate-500">
+            <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-500"></span> Fast turnaround</div>
+            <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-500"></span> Mobile-first</div>
+            <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-500"></span> SEO-ready</div>
+          </div>
+        </div>
+        <div class="reveal md:justify-self-end">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" alt="Showcase" class="rounded-2xl shadow-2xl border border-slate-200"/>
+            <div class="absolute -bottom-6 -left-6 hidden md:block">
+              <div class="glass rounded-2xl p-4 shadow-lg border border-white/40">
+                <p class="text-xs text-slate-600">Recent Projects</p>
+                <p class="font-semibold text-slate-900">12+ launches in 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Services</h2>
+        <p class="mt-4 text-slate-600">Pick what you need or bundle for a better rate.</p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white shadow-sm hover:shadow-md transition">
+          <div class="text-sky-600 font-semibold">01</div>
+          <h3 class="mt-2 text-xl font-semibold">Landing Pages</h3>
+          <p class="mt-2 text-slate-600">High-converting pages built with clean code and compelling copy. Integrations for email and analytics included.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>• Responsive design</li>
+            <li>• Copywriting included</li>
+            <li>• Basic SEO</li>
+          </ul>
+        </div>
+        <!-- Card 2 -->
+        <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white shadow-sm hover:shadow-md transition">
+          <div class="text-sky-600 font-semibold">02</div>
+          <h3 class="mt-2 text-xl font-semibold">Websites</h3>
+          <p class="mt-2 text-slate-600">Multi‑page sites with CMS or static builds. Modern UI, fast performance, and easy editing.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>• 3–6 pages typical</li>
+            <li>• Blog or CMS optional</li>
+            <li>• On‑page SEO</li>
+          </ul>
+        </div>
+        <!-- Card 3 -->
+        <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white shadow-sm hover:shadow-md transition">
+          <div class="text-sky-600 font-semibold">03</div>
+          <h3 class="mt-2 text-xl font-semibold">Brand & Assets</h3>
+          <p class="mt-2 text-slate-600">Logos, color systems, social banners, and templates to keep your brand consistent.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>• Logo kit</li>
+            <li>• Social templates</li>
+            <li>• Canva handover</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Portfolio -->
+  <section id="work" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Selected Work</h2>
+        <p class="mt-4 text-slate-600">A few snapshots from recent builds.</p>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project cards -->
+        <a class="reveal group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm" href="#" target="_blank">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition" src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1600&auto=format&fit=crop" alt="Project 1"/>
+          <div class="p-4">
+            <div class="text-sm text-sky-600 font-medium">Landing Page</div>
+            <div class="font-semibold">Fitness Coach</div>
+          </div>
+        </a>
+        <a class="reveal group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm" href="#" target="_blank">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition" src="https://images.unsplash.com/photo-1520975682031-a4b56a48a8f0?q=80&w=1600&auto=format&fit=crop" alt="Project 2"/>
+          <div class="p-4">
+            <div class="text-sm text-sky-600 font-medium">Multi‑page Site</div>
+            <div class="font-semibold">Local Café</div>
+          </div>
+        </a>
+        <a class="reveal group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm" href="#" target="_blank">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition" src="https://images.unsplash.com/photo-1590608897129-79da98d1596d?q=80&w=1600&auto=format&fit=crop" alt="Project 3"/>
+          <div class="p-4">
+            <div class="text-sm text-sky-600 font-medium">Brand Kit</div>
+            <div class="font-semibold">E‑commerce</div>
+          </div>
+        </a>
+        <a class="reveal group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm" href="#" target="_blank">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition" src="https://images.unsplash.com/photo-1607419726999-44387378d7b6?q=80&w=1600&auto=format&fit=crop" alt="Project 4"/>
+          <div class="p-4">
+            <div class="text-sm text-sky-600 font-medium">Marketing Page</div>
+            <div class="font-semibold">SaaS Tool</div>
+          </div>
+        </a>
+        <a class="reveal group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm" href="#" target="_blank">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition" src="https://images.unsplash.com/photo-1531538062009-396f448f23d1?q=80&w=1600&auto=format&fit=crop" alt="Project 5"/>
+          <div class="p-4">
+            <div class="text-sm text-sky-600 font-medium">Product Page</div>
+            <div class="font-semibold">Outdoor Gear</div>
+          </div>
+        </a>
+        <a class="reveal group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm" href="#" target="_blank">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition" src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1600&auto=format&fit=crop" alt="Project 6"/>
+          <div class="p-4">
+            <div class="text-sm text-sky-600 font-medium">Portfolio</div>
+            <div class="font-semibold">Creative Studio</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="reveal">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">About Me</h2>
+          <p class="mt-4 text-slate-600">I’m Ahren, a designer-developer focused on clear structure, readable typography, and results-driven content. I mix no‑code tools with custom code so you can ship quickly and scale later.</p>
+          <ul class="mt-6 space-y-3 text-slate-700">
+            <li>✔ 4+ years building sites and funnels</li>
+            <li>✔ Comfortable with Canva, Figma, and code</li>
+            <li>✔ Friendly timelines and transparent pricing</li>
+          </ul>
+        </div>
+        <div class="reveal md:justify-self-end">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl">
+            <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1600&auto=format&fit=crop" alt="Workspace" class="w-full h-80 object-cover"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Kind Words</h2>
+        <p class="mt-4 text-slate-600">What clients say after launch.</p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <!-- Quote 1 -->
+        <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-slate-700">“Super smooth process. The landing page doubled our sign‑ups in two weeks.”</p>
+          <div class="mt-4 text-sm text-slate-500">— Mia, Fitness Coach</div>
+        </div>
+        <!-- Quote 2 -->
+        <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-slate-700">“Clean code, clear copy, and great communication. Highly recommended.”</p>
+          <div class="mt-4 text-sm text-slate-500">— Lucas, Café Owner</div>
+        </div>
+        <!-- Quote 3 -->
+        <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-slate-700">“We shipped in days, not weeks. The brand kit made our socials look pro.”</p>
+          <div class="mt-4 text-sm text-slate-500">— Aira, E‑commerce</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing / Packages -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Packages</h2>
+        <p class="mt-4 text-slate-600">Transparent pricing. Custom quotes available.</p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <!-- Tier -->
+        <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
+          <h3 class="text-xl font-semibold">Starter</h3>
+          <p class="mt-2 text-slate-600">Single landing page, copy included.</p>
+          <div class="mt-6 text-3xl font-extrabold">₱9,900</div>
+          <ul class="mt-6 text-sm space-y-2 text-slate-700">
+            <li>• 1 revision round</li>
+            <li>• Mobile‑first</li>
+            <li>• Basic analytics</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-white">Choose</a>
+        </div>
+        <div class="reveal rounded-2xl border-2 border-sky-500 p-6 bg-white shadow-md">
+          <h3 class="text-xl font-semibold">Pro</h3>
+          <p class="mt-2 text-slate-600">Multi‑section site with integrations.</p>
+          <div class="mt-6 text-3xl font-extrabold">₱19,900</div>
+          <ul class="mt-6 text-sm space-y-2 text-slate-700">
+            <li>• Up to 4 pages</li>
+            <li>• CMS or blog</li>
+            <li>• SEO setup</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-sky-600 px-4 py-2 text-white">Most Popular</a>
+        </div>
+        <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
+          <h3 class="text-xl font-semibold">Brand Kit</h3>
+          <p class="mt-2 text-slate-600">Logo, colors, social templates.</p>
+          <div class="mt-6 text-3xl font-extrabold">₱7,900</div>
+          <ul class="mt-6 text-sm space-y-2 text-slate-700">
+            <li>• 3 logo options</li>
+            <li>• Typography & colors</li>
+            <li>• Canva files</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-white">Choose</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-slate-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center">
+        <h2 class="text-3xl md:text-4xl font-bold">Let’s build something</h2>
+        <p class="mt-3 text-slate-300">Tell me about your project and timeline. I’ll reply within 24 hours.</p>
+      </div>
+      <form class="reveal mt-10 grid gap-4 bg-white/5 rounded-2xl p-6 border border-white/10">
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="text-sm text-slate-300">Name</span>
+            <input required type="text" class="mt-1 w-full rounded-xl bg-white text-slate-900 px-4 py-2 outline-none border border-slate-300 focus:border-sky-500" placeholder="Your name" />
+          </label>
+          <label class="block">
+            <span class="text-sm text-slate-300">Email</span>
+            <input required type="email" class="mt-1 w-full rounded-xl bg-white text-slate-900 px-4 py-2 outline-none border border-slate-300 focus:border-sky-500" placeholder="you@email.com" />
+          </label>
+        </div>
+        <label class="block">
+          <span class="text-sm text-slate-300">What do you need?</span>
+          <select class="mt-1 w-full rounded-xl bg-white text-slate-900 px-4 py-2 outline-none border border-slate-300 focus:border-sky-500">
+            <option>Landing Page</option>
+            <option>Website</option>
+            <option>Brand & Assets</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="text-sm text-slate-300">Message</span>
+          <textarea rows="5" class="mt-1 w-full rounded-xl bg-white text-slate-900 px-4 py-2 outline-none border border-slate-300 focus:border-sky-500" placeholder="Tell me about your goals"></textarea>
+        </label>
+        <div class="flex items-center justify-between">
+          <p class="text-sm text-slate-300">Or email me: <a href="mailto:ahren@example.com" class="underline">ahren@example.com</a></p>
+          <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-sky-500 px-5 py-3 text-slate-900 font-semibold hover:bg-sky-400">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-500">© <span id="year"></span> Ahren Oclarit. All rights reserved.</p>
+      <div class="flex items-center gap-5 text-slate-500">
+        <a class="hover:text-slate-900" href="#top">Back to top</a>
+        <a class="hover:text-slate-900" href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
