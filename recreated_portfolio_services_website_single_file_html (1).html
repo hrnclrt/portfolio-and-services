@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahren Oclarit — Portfolio & Services</title>
+  <meta name="description" content="Portfolio and services website for Ahren Oclarit: web design, landing pages, copy, and brand assets." />
+  <meta property="og:title" content="Ahren Oclarit — Portfolio & Services" />
+  <meta property="og:description" content="Web design, landing pages, and content services." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .reveal { opacity: 0; transform: translateY(16px); transition: all 700ms ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .glass { background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.5)); backdrop-filter: blur(8px); }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#top" class="flex items-center gap-2 font-semibold text-slate-900">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-sky-500 text-white">AO</span>
+          <span>Ahren Oclarit</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#services" class="hover:text-sky-600">Services</a>
+          <a href="#work" class="hover:text-sky-600">Work</a>
+          <a href="#about" class="hover:text-sky-600">About</a>
+          <a href="#testimonials" class="hover:text-sky-600">Testimonials</a>
+          <a href="#contact" class="hover:text-sky-600">Contact</a>
+        </nav>
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-sky-600 px-4 py-2 text-white shadow hover:bg-sky-700">
+          <span>Get a Quote</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <!-- ... unchanged hero and other sections ... -->
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-slate-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center">
+        <h2 class="text-3xl md:text-4xl font-bold">Let’s build something</h2>
+        <p class="mt-3 text-slate-300">Tell me about your project and timeline. I’ll reply within 24 hours.</p>
+      </div>
+      <form id="contactForm" class="reveal mt-10 grid gap-4 bg-white/5 rounded-2xl p-6 border border-white/10">
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="text-sm text-slate-300">Name</span>
+            <input required name="name" type="text" class="mt-1 w-full rounded-xl bg-white text-slate-900 px-4 py-2 outline-none border border-slate-300 focus:border-sky-500" placeholder="Your name" />
+          </label>
+          <label class="block">
+            <span class="text-sm text-slate-300">Email</span>
+            <input required name="email" type="email" class="mt-1 w-full rounded-xl bg-white text-slate-900 px-4 py-2 outline-none border border-slate-300 focus:border-sky-500" placeholder="you@email.com" />
+          </label>
+        </div>
+        <label class="block">
+          <span class="text-sm text-slate-300">What do you need?</span>
+          <select name="service" class="mt-1 w-full rounded-xl bg-white text-slate-900 px-4 py-2 outline-none border border-slate-300 focus:border-sky-500">
+            <option>Landing Page</option>
+            <option>Website</option>
+            <option>Brand & Assets</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="text-sm text-slate-300">Message</span>
+          <textarea name="message" rows="5" class="mt-1 w-full rounded-xl bg-white text-slate-900 px-4 py-2 outline-none border border-slate-300 focus:border-sky-500" placeholder="Tell me about your goals"></textarea>
+        </label>
+        <div class="flex items-center justify-between">
+          <p class="text-sm text-slate-300">Or email me: <a href="mailto:ahren@example.com" class="underline">ahren@example.com</a></p>
+          <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-sky-500 px-5 py-3 text-slate-900 font-semibold hover:bg-sky-400">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-500">© <span id="year"></span> Ahren Oclarit. All rights reserved.</p>
+      <div class="flex items-center gap-5 text-slate-500">
+        <a class="hover:text-slate-900" href="#top">Back to top</a>
+        <a class="hover:text-slate-900" href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Handle contact form submission and send email
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const subject = `New Contact Form Submission from ${formData.get('name')}`;
+      const body = `Name: ${formData.get('name')}%0D%0AEmail: ${formData.get('email')}%0D%0AService: ${formData.get('service')}%0D%0AMessage:%0D%0A${formData.get('message')}`;
+
+      window.location.href = `mailto:ahren.personal@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
